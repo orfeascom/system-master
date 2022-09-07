@@ -6,5 +6,6 @@
   <packaging>pom</packaging>
   <modules>
   	<module>dvd</module>
+  	<module>user</module>
   </modules>
 </project>

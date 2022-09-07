@@ -22,7 +22,6 @@ public class DVD {
 
 	public DVD(int dvdid, String title, String director, String date, List<String> actors, List<String> languages,
 			List<String> subs, int duration, List<String> genre, int price, int pieces) {
-		super();
 		this.dvdid = dvdid;
 		this.title = title;
 		this.director = director;
