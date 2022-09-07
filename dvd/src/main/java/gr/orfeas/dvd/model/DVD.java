@@ -3,7 +3,6 @@ package gr.orfeas.dvd.model;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
-
 @XmlRootElement
 public class DVD {
 	private int dvdid;

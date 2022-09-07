@@ -4,8 +4,42 @@
   <artifactId>system-master</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
+  
+  <properties>  
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <maven-compiler.version>3.8.1</maven-compiler.version>
+    <cargo.version>1.9.3</cargo.version>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>    
+  
+  <build>  
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>${maven-compiler.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.cargo</groupId>
+          <artifactId>cargo-maven3-plugin</artifactId>
+          <version>${cargo.version}</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>  
+  
+  
+  
+  
   <modules>
   	<module>dvd</module>
   	<module>user</module>
+  	<module>card</module>
+  	<module>order</module>
   </modules>
+  
+  
 </project>
