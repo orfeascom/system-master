@@ -3,16 +3,17 @@ package gr.orfeas.user.info;
 
 
 public class Info {
-	private String role = null;
+	private String type = null;
 	private String address = null;
 	private String cardtype = null;
-	private int cardnum;
+	private int cardnum = 10;
 	private String carddate = null;
-	private int cardpass;
+	private int cardpass = 10;
 	
 	public Info() {}
 
-	public Info(String address, String cardtype, int cardnum, String carddate, int cardpass) {
+	public Info(String type, String address, String cardtype, int cardnum, String carddate, int cardpass) {
+		this.type = type;
 		this.address = address;
 		this.cardtype = cardtype;
 		this.cardnum = cardnum;
@@ -21,8 +22,8 @@ public class Info {
 	}
 	
 	
-	public Info(String role) {
-		this.role = role;
+	public Info(String type) {
+		this.type = type;
 	}
 
 	public String getAddress() {
@@ -65,12 +66,12 @@ public class Info {
 		this.cardpass = cardpass;
 	}
 
-	public String getRole() {
-		return role;
+	public String getType() {
+		return type;
 	}
 
-	public void setRole(String role) {
-		this.role = role;
+	public void setType(String type) {
+		this.type = type;
 	}
 	
 	

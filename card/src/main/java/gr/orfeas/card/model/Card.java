@@ -1,26 +1,31 @@
 package gr.orfeas.card.model;
 
-import gr.orfeas.user.model.User;
+
 import java.util.List;
 
+import jakarta.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Card {
-	private int id;
-	private User user;
+	private int id = 0;
+	private int userid = 0;
 	private List<String> dvd;
-	private int dvdnum;
+	private int dvdnum = 0;
 	private String date;
-	private int cost;
+	private int cost = 0;
+	private String status;
 	
 	public Card() {}
 
-	public Card(int id, User user, List<String> dvd, int dvdnum, String date, int cost) {
+	public Card(int id, int userid, List<String> dvd, int dvdnum, String date, int cost, String status) {
 		super();
 		this.id = id;
-		this.user = user;
+		this.userid = userid;
 		this.dvd = dvd;
 		this.dvdnum = dvdnum;
 		this.date = date;
 		this.cost = cost;
+		this.status = status;
 	}
 
 	public int getId() {
@@ -31,19 +36,19 @@ public class Card {
 		this.id = id;
 	}
 
-	public User getUser() {
-		return user;
+	public int getUserid() {
+		return userid;
 	}
 
-	public void setUser(User user) {
-		this.user = user;
+	public void setUserid(int userid) {
+		this.userid = userid;
 	}
 
-	public List<String> getDvd() {
+	public List<String> getDvds() {
 		return dvd;
 	}
 
-	public void setDvd(List<String> dvd) {
+	public void setDvds(List<String> dvd) {
 		this.dvd = dvd;
 	}
 
@@ -70,11 +75,20 @@ public class Card {
 	public void setCost(int cost) {
 		this.cost = cost;
 	}
+	
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
 
 	@Override
 	public String toString() {
-		return "Order [id=" + id + ", user=" + user + ", dvd=" + dvd + ", dvdnum=" + dvdnum + ", date=" + date
-				+ ", cost=" + cost + "]";
+		return "Order [id=" + id + ", userid=" + userid + ", dvd=" + dvd + ", dvdnum=" + dvdnum + ", date=" + date
+				+ ", cost=" + cost + ", status=" + status + "]";
 	}
 	
 	

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+
+		<label>Search for orders</label>
+		<form id="orders">
+		Enter order address : <input type="text" name="address"><br>
+		Enter card id : <input type="text" name="cardid"><br>
+		Enter order status : <input type="text" name="status"><br>
+		<button type="submit" onclick="window.location.href + '/system-rest/system/services/order' + document.getElementByName('Address').value">Search</button>
+		</form>
+
+
+
+
+
+</body>
+</html>

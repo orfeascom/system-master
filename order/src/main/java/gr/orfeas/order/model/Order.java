@@ -1,14 +1,13 @@
 package gr.orfeas.order.model;
 
-import javax.xml.bind.annotation.XmlRootElement;
-import gr.orfeas.user.model.User;
+import jakarta.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 public class Order {
 	private int id;
 	private String address;
 	private int cardid;
-	private User client;
+	private int userid;
 	private String status = null;
 	private String datecr = null;
 	private String datecmpl = null;
@@ -17,12 +16,12 @@ public class Order {
 	
 	public Order() {}
 
-	public Order(int id, String address, int cardid, User client, String status, String datecr) {
+	public Order(int id, String address, int cardid, int userid, String status, String datecr) {
 		super();
 		this.id = id;
 		this.address = address;
 		this.cardid = cardid;
-		this.client = client;
+		this.userid = userid;
 		this.status = status;
 		this.datecr = datecr;
 	}
@@ -51,12 +50,12 @@ public class Order {
 		this.cardid = cardid;
 	}
 
-	public User getClient() {
-		return client;
+	public int getUserid() {
+		return userid;
 	}
 
-	public void setClient(User client) {
-		this.client = client;
+	public void setUserid(int userid) {
+		this.userid = userid;
 	}
 
 	public String getStatus() {
@@ -101,7 +100,7 @@ public class Order {
 
 	@Override
 	public String toString() {
-		return "Order [id=" + id + ", address=" + address + ", cardid=" + cardid + ", client=" + client + ", status="
+		return "Order [id=" + id + ", address=" + address + ", cardid=" + cardid + ", userid=" + userid + ", status="
 				+ status + ", datecr=" + datecr + ", datecmpl=" + datecmpl + ", stalling=" + stalling + ", deleted="
 				+ deleted + "]";
 	}
